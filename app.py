@@ -14,7 +14,7 @@ app = Flask(__name__)
 nltk.download("stopwords")
 
 ps = PorterStemmer()
-model = pickle.load(open("fake_news.pkl", 'rb'))
+model = pickle.load(open("xgb_fake_news_predictor.pkl", 'rb'))
 
 def preprocess_news(news):
     p_news = re.sub('[^a-zA-Z]', ' ', news)
